@@ -1,8 +1,23 @@
-# React + Vite
+# PRUEBA TÉCNICA FRONTEND VUEJS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Se requiere desarrollar una pequeña web con el framework de VUEJS
 
-Currently, two official plugins are available:
+El objetivo de esta prueba es poder evaluar la creación e interacción de componentes de Angular y la conexión con servicios Api Rest.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Se requiere:
+
+1.  Generar una interfaz de usuario donde exista a lo menos 3 componentes anidados entre sí.
+
+2.  Los componentes creados deben hacer uso de los binding necesarios para el traspaso de información y acciones para su interacción.
+
+3.  Cada componente debe tener su Lifecycle (ciclo de vida) necesario.
+
+4.  La información desplegada debe venir desde api Rest (https://developer.marvel.com/)
+
+5.  Con la información desplegada desde el Api Rest, hacer un CRUD funcional
+
+## Se debe entregar:
+
+1.  Ruta del proyecto Web publicado en GitHub o GitLab
+
+2.  Completar el formulario de "prueba habilidades javascript (1).txt
