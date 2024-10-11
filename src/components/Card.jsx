@@ -1,11 +1,14 @@
 import editIcon from "../assets/pen-svgrepo-com.svg";
 import deleteIcon from "../assets/close-circle-svgrepo-com.svg";
 
-const Card = ({ id, name, description, thumbnail, onDelete }) => {
+const Card = ({ id, name, description, thumbnail, onDelete, onEdit }) => {
   return (
     <div className="static group shadow-lg shadow-gray-800/70 w-64 rounded-xl bg-gradient-to-b from-violet-500 to-violet-950  hover:scale-105 hover:shadow-xl hover:shadow-gray-800/70 transition-all duration-300">
       <div className="w-full hidden  group-hover:absolute top-0 group-hover:flex justify-between p-4">
-        <button className="w-8 h-8 flex items-center justify-center rounded-full bg-amber-200">
+        <button
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-amber-200"
+          onClick={() => onEdit({ id, name, description, thumbnail })}
+        >
           <img className="w-4" src={editIcon} alt="Edit Info" />
         </button>
         <button
