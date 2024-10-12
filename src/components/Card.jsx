@@ -6,13 +6,13 @@ const Card = ({ id, name, description, thumbnail, onDelete, onEdit }) => {
     <div className="static group shadow-lg shadow-gray-800/70 w-64 rounded-xl bg-gradient-to-b from-violet-500 to-violet-950  hover:scale-105 hover:shadow-xl hover:shadow-gray-800/70 transition-all duration-300">
       <div className="w-full hidden  group-hover:absolute top-0 group-hover:flex justify-between p-4">
         <button
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-amber-200"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-amber-200 hover:bg-blue-500 active:bg-blue-300"
           onClick={() => onEdit({ id, name, description, thumbnail })}
         >
           <img className="w-4" src={editIcon} alt="Edit Info" />
         </button>
         <button
-          className="w-8 h-8 flex items-center justify-center rounded-full bg-amber-200 hover:bg-red-500"
+          className="w-8 h-8 flex items-center justify-center rounded-full bg-amber-200 hover:bg-red-500 active:bg-red-200"
           onClick={() => onDelete(id)}
         >
           <img className="w-8" src={deleteIcon} alt="Delete Hero" />

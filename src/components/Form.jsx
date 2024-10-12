@@ -40,7 +40,7 @@ const Form = ({
       await setTimeout(() => {
         showChange(false);
         setErrors("");
-      }, 1500);
+      }, 1000);
     }
   };
   const handleCancel = (e) => {
@@ -52,7 +52,7 @@ const Form = ({
   return (
     <div className="fixed top-0 left-0 w-screen h-screen bg-black/80 flex items-center justify-center">
       <form
-        className="py-8 w-4/6 flex flex-col gap-2 bg-gradient-to-b from-violet-500 to-violet-950 rounded-xl items-center"
+        className="p-8  flex flex-col gap-2 bg-gradient-to-b from-violet-500 to-violet-950 rounded-xl items-center"
         onSubmit={handleSubmit}
       >
         <h1 className="text-gray-100 m-4 text-center text-3xl font-semibold">

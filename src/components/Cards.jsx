@@ -9,12 +9,13 @@ const Cards = () => {
   const [isLoading, setLoading] = useState(true);
   const [data, setData] = useState([]);
 
-  const [formData, setFormData] = useState({
+  const initialFormData = {
     id: 0,
     name: "",
     thumbnail: "",
     description: "",
-  });
+  };
+  const [formData, setFormData] = useState(initialFormData);
   const [showForm, setShowForm] = useState(false);
   const showFormChange = (state) => {
     setShowForm(state);
@@ -56,6 +57,7 @@ const Cards = () => {
     };
 
     setData((prev) => heroes);
+    setFormData(initialFormData);
   };
 
   const createHero = ({ name, description, thumbnail }) => {
@@ -70,13 +72,19 @@ const Cards = () => {
           description === "" ? `${name}'s info is classified` : description,
       },
     ]);
+    setFormData(initialFormData);
+  };
+
+  const handleCreateClick = () => {
+    setFormData(initialFormData);
+    showFormChange(true);
   };
 
   return (
     <div className="h-full p-8">
       {isLoading ? (
-        <div className="flex justify-center items-center font-bold text-4xl animate-pulse">
-          <h1>Loading</h1>
+        <div className="flex justify-center items-center font-bold text-7xl animate-pulse pt-96">
+          <h1>Loading...</h1>
         </div>
       ) : (
         <div className="flex flex-row gap-8 flex-wrap justify-evenly">
@@ -104,8 +112,8 @@ const Cards = () => {
         />
       )}
       <button
-        className="fixed bottom-2 right-2 bg-amber-200 w-24 rounded-full"
-        onClick={() => showFormChange(true)}
+        className="fixed bottom-2 right-2 bg-amber-200 w-24 rounded-full hover:bg-green-500 active:bg-green-200"
+        onClick={handleCreateClick}
       >
         <img src={addIcon} alt="" />
       </button>
