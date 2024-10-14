@@ -83,7 +83,7 @@ const Cards = () => {
   return (
     <div className="h-full p-8">
       {isLoading ? (
-        <div className="flex justify-center items-center font-bold text-7xl animate-pulse pt-96">
+        <div className="flex justify-center items-center font-bold text-7xl animate-pulse pt-48">
           <h1>Loading...</h1>
         </div>
       ) : (
